@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse</title>
+    <link rel="stylesheet" href="movie.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a409219297.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap" rel="stylesheet">
+    <style>
+        #trailerFrame{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            margin-left: 0;
+        }
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+        }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 50%;
+            color: red;
+            font-size: 60px;
+            cursor: pointer;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    
+<nav class="navbar">
+    <img src="logo.png" alt="" class="img">
+    <ul>
+        <a href="#" ><li>Home</li></a>
+        <li>Favourites</li>
+        <li class="services">Services
+            <div>
+                <ol>
+                    <li>Downloads</li>
+                    <li>Stream</li>
+                    <li>Watch trailer</li>
+                    <li>History</li>
+                </ol>
+            </div>
+        </li>
+        <li>About</li>
+    </ul>
+</nav>
+    <div class="body">
+    <input type="search" name="" id="query" placeholder="Search Your Movies">
+</div>
+    <div class="container">
+        <select id="genreSelect">
+            <option value="">GENRES</option>
+          </select>
+          
+          <div id="moviesContainer"></div>
+          
+        <div id="genres"></div>
+        <h1 id="header">Now Playing</h1>
+        <div id="card"></div>
+            <div id="trailerModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <iframe id="trailerFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                
+            </div>
+            
+        </div>
+        <h1 id="header1">Popular</h1>
+        <div id="card2">
+          
+        </div>
+
+        <h1 id="header2">Top Rated</h1>
+        <div id="card3">
+        </div>
+        <h1 id="header3">Upcoming</h1>
+        <div id="card4">
+
+        </div>
+        <div id="loader"></div>
+<div id="content" style="display: none;">
+</div>
+
+    </div>
+    <footer>
+            <div class="container_footer">
+            <div class="about_footer">
+                <h4>About</h4>
+                <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius.</p>
+                <div class="imageIcon">
+                <a href="https://www.instagram.com/bertrand.the.first/" target="_blank"> <img src="instagram.png" alt="" class="iconImage"></a>
+                <a href="https://x.com/MucyoBertrand7" target="_blank"><img src="twitter.png" alt="" class="iconImage"></a>
+                <a href="https://www.linkedin.com/in/irasubiza-mucyo-bertrand-264a20331/" target="_blank"><img src="linkedin.png" alt="" class="iconImage"></a>
+                <a href="http://www.youtube.com" target="_blank"><img src="youtube.png" alt="" class="iconImage"></a>
+                <a href="http://www.facebook.com" target="_blank"><img src="facebook.png" alt="" class="iconImage"></a>
+            </div>
+            </div>
+            <div class="address">
+                <h4>Address</h4>
+                <p class="addressText">Healing Center ,oo W Street name,
+                    Lorem, ipsum.
+                </p>
+                <p class="addressnumber">
+                    <pre>
+(+250)726 705 905
+(+250)791 243 193
+                    </pre>
+                </p>
+                <p>mail@domain.com</p>
+            </div>
+            <div class="links">
+                <h4>Links</h4>
+                <ul class="listNav">
+                    <li>Home</li>
+                    <li>Favourites</li>
+                    <li>Services</li>
+                    <li>About</li>
+                    
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <form action="" class="footerForm">
+                    <input type="text" name="" id="" placeholder="Your Name"><br/>
+                    <input type="email" name="" id="" placeholder="Email"><br>
+                    <button >subscribe</button>
+                </form>
+            </div>
+            </div>
+            <div class="text">
+            <p id="text">&copy; All Rights Reserved.By Bertrand-the-first</p>
+        </div>
+    </footer>
+    <script src="movie.js" defer></script>
+</body>
+</html>

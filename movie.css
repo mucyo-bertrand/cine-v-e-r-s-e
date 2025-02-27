@@ -1,0 +1,412 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    font-family: cursive;
+}
+.img{
+    width: 140px;
+    font-size: 20px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 60px;
+    transition: all 2s;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li:hover{
+    cursor: pointer;
+    margin-left: 60px;
+    color: red;
+    letter-spacing: 1.5px;
+}
+select{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.623);
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: cursive;
+}
+.services div{
+    position: relative;
+    display: none;
+}
+.services{
+    transition: all 2s;
+}
+.services:hover div{
+    position: absolute;
+    display: block;
+    width: 30px;
+    margin-top: 0px;
+    margin-left: -110px;
+    z-index: -1;
+    background-color: rgba(241, 13, 13, 0);
+}
+.services:hover div ol li{
+    color: rgba(255, 255, 255, 0.637);
+    transition: all 2s;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.services:hover div ol li:hover{
+    color: rgba(207, 8, 8, 0.781);
+    letter-spacing: 1.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+h1{
+    color: red;
+    font-size: 30px;
+}
+#card{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    border-radius: 10px;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+.body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(copy.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.712);
+    cursor: pointer;
+    transition: 1.3s;
+    
+}
+button:hover{
+    background-color: rgb(13, 241, 13);
+    color: white;
+    font-size: 20px;
+    width: 150px;
+    box-shadow: 5px 5px 5px red;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+
+}
+.movie-card:hover img{
+    opacity: 0.7;
+}
+.movie-card .link::before{
+    transition: 1.8s;
+}
+.movie-card:hover .link{
+    text-decoration: underline;
+    font-size: 15px;
+}
+.link:link{
+    text-decoration: none;
+    color: blue;
+}
+.link:visited{
+    text-decoration: none;
+    color: blue;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.body input{
+    background: linear-gradient(to right,red,green,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: sticky;
+    top: 25px;
+    z-index: 1;
+    margin-top: 250px;
+    width: 500px;
+    padding: 20px;
+    height: 60px;
+    font-style: italic;
+    border-radius: 10px;
+    border: 1px solid rgb(231, 13, 13);
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-box-reflect: below 5px linear-gradient(transparent,rgba(0,0,0,0.7));
+}
+input::placeholder{
+    background: linear-gradient(to right,red,green,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.5;
+    padding: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+#card{
+    display: grid;
+    grid-template-columns: repeat(5);
+}
+#card2,#card3,#card4{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+}
+.movie-card{
+    background-color: rgba(245, 245, 245, 0);
+    width: 179.5px;
+    height: 326.25px;
+    margin: 70px 10px;
+    padding: 0;
+    text-align: left;
+    border: 0px solid transparent;
+    border-radius: 15px;
+    transition:1.3s ease-out;
+}
+
+.movie-card:hover{
+    opacity: 1 !important;
+}
+
+.container:hover .movie-card{
+    opacity: 1;
+}
+
+.movie-card img:hover{
+    box-shadow: -2px 0 7px 6px rgba(102, 43, 24, 0.623),2px 0 6px 6px rgb(64, 231, 13),0 0 20px 5px rgba(231, 13, 220, 0.767);  
+}
+.movie-card img{
+    opacity: 1;
+    width: 179.5px;
+    height: 282.25px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: 1.01s ease-out;
+    animation:pop 3s ease-in-out 0.5s alternate-reverse linear;
+}
+.movie-card:hover .container{
+    opacity: 0.99;
+}
+#loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #e91d0e;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.movie-card:hover img{
+    opacity: 0.4;
+    transform: scale(1.07);
+    z-index: 1;
+    opacity: 1;
+}
+.movie-card i{
+    position: absolute;
+    visibility: hidden;
+}
+.movie-card:hover i{
+    position: absolute;
+    visibility: visible;
+    margin-left: -90px;
+    margin-top: 140px;
+    text-align: center;
+}
+
+.movie-card p{
+    display: none;
+    position: absolute;
+    color: white;
+    margin-top: 30px;
+    width: 250px;
+    opacity: 0.7;
+    word-break: keep-all;
+    margin-top: -250px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+} 
+.movie-card:hover p{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    margin-top: -250px;
+}
+
+.container_footer {
+    margin-top: 90px;
+    background-image: linear-gradient(4deg,rgba(255, 6, 6, 0.685),rgba(0, 0, 0, 0.315));
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    margin-bottom: 30px;
+    height: 350px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.movie-card:hover .link2{
+    text-decoration: underline;
+}
+.link2{
+    color: blue;
+    text-decoration: none;
+}
+
+.about_footer{
+    margin-left: 80px;
+}
+.about_footer h4{
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: -10px;
+    font-family: cursive;
+}
+
+.address h4{
+    font-size: 24px;
+    cursor: pointer;
+    font-family: cursive;
+}
+.links h4{
+    font-size: 24px;
+    margin-top: -45px;
+    cursor: pointer;
+    font-family: cursive;
+}
+.newsletter{
+    margin-left: 80px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: -20px;
+    font-family: cursive;
+}
+.address{
+    cursor: pointer;
+    margin-left: 80px;
+}
+.links{
+    cursor: pointer;
+    margin-left: 80px;
+}
+.newsletter{
+    cursor: pointer;
+    margin-left: 130px;
+    display: flex;
+    flex-direction: column;
+}
+.about_footer p{
+    cursor: pointer;
+    width: 150px;
+    text-indent: 0;
+}
+.address p{
+    cursor: pointer;
+    width: 150px;
+    text-indent: 0;
+}
+.addressnumber pre{
+    font-size: 30px;
+    width: 150px;
+    text-indent: 0;
+}
+.links ul{
+    cursor: pointer;
+    list-style: none;
+    margin: 5px;
+}
+.links ul li{
+    margin: 5px;
+}
+.newsletter input{
+    width: 250px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.text{
+    text-indent: 0;
+    text-align: left;
+    width: 100%;
+}
+#text{
+    text-indent: 0;
+    font-size: 20px;
+    margin-left: 500px;
+}
+.imageIcon{
+    margin-top: 20px;
+    color: white;
+
+}
+
+.about_footer .imageIcon .iconImage{
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.about_footer:hover .imageIcon:hover .iconImage:hover{
+    width: 30px;
+    height: 30px;
+    animation-name: rotate;
+    animation-iteration-count: initial;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-direction: alternate;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    
+    100%{
+        transform: rotate(360deg) scale(1.4);
+    }
+}
